@@ -1,33 +1,41 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #6366f1;
+  --color-primary: #10b981;
   --color-primary-foreground: #ffffff;
-  --color-secondary: #f1f5f9;
-  --color-secondary-foreground: #0f172a;
-  --color-destructive: #ef4444;
+  --color-secondary: #edeae1;
+  --color-secondary-foreground: #1a1a1a;
+  --color-destructive: #c75450;
   --color-destructive-foreground: #ffffff;
-  --color-muted: #f1f5f9;
-  --color-muted-foreground: #64748b;
-  --color-accent: #f1f5f9;
-  --color-accent-foreground: #0f172a;
-  --color-background: #ffffff;
-  --color-foreground: #0f172a;
+  --color-warning: #d4a017;
+  --color-muted: #edeae1;
+  --color-muted-foreground: #8a8780;
+  --color-accent: #d6f0e4;
+  --color-accent-foreground: #10b981;
+  --color-background: #fafaf7;
+  --color-foreground: #1a1a1a;
   --color-card: #ffffff;
-  --color-card-foreground: #0f172a;
-  --color-border: #e2e8f0;
-  --color-input: #e2e8f0;
-  --color-ring: #6366f1;
+  --color-card-foreground: #1a1a1a;
+  --color-border: #d8d6cf;
+  --color-input: #d8d6cf;
+  --color-ring: #10b981;
 
-  --radius-sm: 0.25rem;
-  --radius-md: 0.375rem;
-  --radius-lg: 0.5rem;
-  --radius-xl: 0.75rem;
+  --radius-sm: 0.375rem;
+  --radius-md: 0.625rem;
+  --radius-lg: 0.875rem;
+  --radius-xl: 1.25rem;
 
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Caveat", cursive;
 }
 
 body {
-  @apply bg-background text-foreground antialiased;
+  @apply bg-background text-foreground;
   font-family: var(--font-sans);
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.45;
 }
