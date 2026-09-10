@@ -4,6 +4,7 @@ import {
   RequireAuth,
   RedirectIfAuth,
 } from "@/features/auth/components/AuthGuard";
+import { HomePage } from "@/features/home/components/HomePage";
 
 export function AppRouter() {
   return (
@@ -15,7 +16,7 @@ export function AppRouter() {
 
       {/* Protected — redirect to /login if not authenticated */}
       <Route element={<RequireAuth />}>
-        <Route path="/" element={<div>Home</div>} />
+        <Route path="/" element={<HomePage />} />
       </Route>
 
       <Route path="*" element={<div>404 — Not Found</div>} />

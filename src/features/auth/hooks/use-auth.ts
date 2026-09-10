@@ -28,8 +28,10 @@ export function useVerifyOtp() {
   const navigate = useNavigate();
 
   return useMutation({
-    mutationFn: ({ email, code }: { email: string; code: string }) =>
-      authApi.verifyOtp(email, code),
+    mutationFn: ({ email, code }: { email: string; code: string }) => {
+      const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      return authApi.verifyOtp(email, code, timezone);
+    },
     onSuccess: (tokens) => {
       setTokens(tokens);
       navigate("/", { replace: true });
