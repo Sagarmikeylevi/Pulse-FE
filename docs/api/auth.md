@@ -37,7 +37,8 @@ Verify OTP and receive auth tokens. Creates user automatically if email is new (
 ```json
 {
   "email": "user@example.com",
-  "code": "482910"
+  "code": "482910",
+  "timezone": "Asia/Kolkata"
 }
 ```
 

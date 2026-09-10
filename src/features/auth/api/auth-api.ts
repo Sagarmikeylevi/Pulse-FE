@@ -14,10 +14,12 @@ export async function sendOtp(email: string): Promise<{ message: string }> {
 export async function verifyOtp(
   email: string,
   code: string,
+  timezone: string,
 ): Promise<AuthTokens> {
   const { data } = await api.post<AuthTokens>(`${AUTH_BASE}/otp/verify`, {
     email,
     code,
+    timezone,
   });
   return data;
 }
